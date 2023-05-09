@@ -2,7 +2,6 @@ import { Card, CardContent, CardMedia, Box } from "@mui/material";
 import { Typography } from "@mui/material";
 // icons
 import WatchLaterOutlinedIcon from "@mui/icons-material/WatchLaterOutlined";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
 export default function LittleBlogCard(props) {
   return (

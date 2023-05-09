@@ -10,7 +10,7 @@ import WatchLaterOutlinedIcon from "@mui/icons-material/WatchLaterOutlined";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { TbPointFilled } from "react-icons/tb";
 
-// common styles
+// category styles
 const categoryStyles = {
   "& > .Nature": {
     color: "green",

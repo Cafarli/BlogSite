@@ -11,3 +11,7 @@
     width: 32%;
     margin: 5% 0;
 }
+.home-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
