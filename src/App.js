@@ -1,16 +1,22 @@
-import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Blogs from './pages/Blogs/Blogs';
+import "./App.css";
+import {
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
+import Blogs from "./pages/Home/Home";
 
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route>
+      <Route index element={<Blogs />} />
+    </Route>
+  )
+);
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/blogcard' element={<Blogs />} />
-      </Routes>
-    </BrowserRouter>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

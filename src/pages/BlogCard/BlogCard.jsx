@@ -4,52 +4,98 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import photo from "../../images/blogImg.jpg";
-import { Typography } from "@mui/material";
+import { Typography, createTheme } from "@mui/material";
 // icons
 import WatchLaterOutlinedIcon from "@mui/icons-material/WatchLaterOutlined";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { TbPointFilled } from "react-icons/tb";
+
 // common styles
-const commonStyles = {
-  bgcolor: "background.paper",
-  m: 1,
-  border: 1,
-  width: "5rem",
-  height: "5rem",
+const categoryStyles = {
+  "& > .Nature": {
+    color: "green",
+  },
+  "& > .Technology": {
+    color: "#f18509",
+  },
+  "& > .Inspiration": {
+    color: "#04baf6",
+  },
+  "& > .Food": {
+    color: "#B43ADF",
+  },
+  "& > .Health": {
+    color: "#1dbf2f",
+  },
+  "& > .Lifestyle": {
+    color: "#4d61ff",
+  },
+  "& > .Travel": {
+    color: "#E10689",
+  },
 };
 
-export default function BlogCard() {
-  const theme = {
+export default function BlogCard(props) {
+  const theme = createTheme({
     spacing: 10,
-  };
+  });
+
   return (
     <Card
       variant="outlined"
-      sx={{ p: 2, display: "flex", width: "100%", borderRadius: '20px' }}
+      sx={{ p: 2,mt:2 , mb:4 , display: "flex", width: "100%", borderRadius: "20px" }}
     >
       <CardMedia
-        sx={{ width: "37%", borderRadius: '20px', transformOrigin: 'center', '&:hover':{
-            transform: 'scale(1.01)'
-        } }}
+        sx={{
+          width: "37%",
+          borderRadius: "20px",
+          transformOrigin: "center",
+          "&:hover": {
+            transform: "scale(1.01)",
+          },
+        }}
         component="img"
         image={photo}
         alt="Space"
       />
-      <Box sx={{ display: "flex", width: "60%", p: 1 }}>
+      <Box sx={{ display: "flex", width: "60%", p: 1}}>
         <CardContent sx={{ flex: "1 0 auto", width: "100%" }}>
-          <Typography variant="p" component="p" sx={{ pb: 0.5, pr:1, pt:0.5, pl:1, mb:2, width:'15%', display:'flex', alignItems: 'center', justifyContent: 'space-around' , borderRadius: "15px", backgroundColor: '#ebebeb','&:hover':{
-            backgroundColor: '#cbe8f5'
-          } }}>
-            <TbPointFilled style={{color: 'blue'}} /> Nature
+          {/* category */}
+          <Typography
+            variant="p"
+            component="p"
+            className="blogCategory"
+            sx={[
+              categoryStyles,
+              {
+                pb: 1,
+                pr: 2,
+                pt: 0.5,
+                pl: 1,
+                mb: 2,
+                width: "max-content",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-around",
+                borderRadius: "15px",
+                backgroundColor: "#ebebeb",
+                "&:hover": {
+                  backgroundColor: "#cbe8f5",
+                },
+              },
+            ]}
+          >
+            <TbPointFilled className={props.data.category} />{" "}
+            {props.data.category}
           </Typography>
+          {/* Blog Title */}
           <Typography
             sx={{
               font: "bold",
-              cursor:'pointer',
+              cursor: "pointer",
               textDecorationColor: "transparent",
               textDecorationThickness: 1,
               textUnderlineOffset: "3px",
-              transition: 'all .020s',
               "&:hover": {
                 textDecoration: "underline",
                 textDecorationThickness: 2,
@@ -58,7 +104,7 @@ export default function BlogCard() {
             }}
             variant="h4"
           >
-            Autumn is a second spring when every leaf is a flower
+            {props.data.blogName}
           </Typography>
           <Typography
             variant="p"
@@ -70,9 +116,7 @@ export default function BlogCard() {
               textOverflow: "ellipsis",
             }}
           >
-            She then expatiated very warmly upon the advantages I should reap
-            from her plan; talked in a high style of my future grandeur; assured
-            me how heartily I should despise almost
+            {props.data.content}
           </Typography>
           <Box
             sx={{
@@ -90,7 +134,7 @@ export default function BlogCard() {
               }}
             >
               <CalendarMonthIcon sx={{ pr: 1, fontSize: "18px" }} />
-              May 8, 2023
+              {props.data.blogDate}
             </Typography>
             <Typography
               sx={{
@@ -100,8 +144,8 @@ export default function BlogCard() {
                 color: "gray",
               }}
             >
-              <WatchLaterOutlinedIcon sx={{ pr: 1, fontSize: "18px" }} />2 min
-              read
+              <WatchLaterOutlinedIcon sx={{ pr: 1, fontSize: "18px" }} />
+              {props.data.blogReadMin} min read
             </Typography>
           </Box>
         </CardContent>
