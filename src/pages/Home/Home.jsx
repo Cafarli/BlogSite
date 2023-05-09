@@ -1,6 +1,8 @@
 import "./Home.css";
 import BlogCard from "../BlogCard/BlogCard";
 import { useState, useEffect } from "react";
+import { Typography } from "@mui/material";
+import LittleBlogCard from "../LittleBlogCard/LittleBlogCard";
 
 export default function Home() {
   const [blogs, setBlogs] = useState([]);
@@ -19,7 +21,10 @@ export default function Home() {
         ))}
         </div>
         <div className="latestBlogs">
-
+          <Typography component="p" variant="p" sx={{fontSize:" 22px", fontWeight:"500"}}>Latest posts</Typography>
+        {blogs.slice(0,3).map((blog,id) => (
+          <LittleBlogCard key={id} data={blog}/>
+        ))}
         </div>
     </div>
   );

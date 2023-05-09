@@ -43,22 +43,23 @@ export default function BlogCard(props) {
   return (
     <Card
       variant="outlined"
-      sx={{ p: 2,mt:2 , mb:4 , display: "flex", width: "100%", borderRadius: "20px" }}
+      sx={{ p: 2,mt:2 , mb:4 , display: "flex",alignItems: "center", width: "100%", borderRadius: "20px" }}
     >
+      {/* Blog image */}
       <CardMedia
         sx={{
           width: "37%",
+          height: "300px",
           borderRadius: "20px",
-          transformOrigin: "center",
           "&:hover": {
             transform: "scale(1.01)",
           },
         }}
         component="img"
-        image={photo}
+        image={props.data.imageUrl}
         alt="Space"
       />
-      <Box sx={{ display: "flex", width: "60%", p: 1}}>
+      <Box sx={{ display: "flex", width: "60%", p: 2}}>
         <CardContent sx={{ flex: "1 0 auto", width: "100%" }}>
           {/* category */}
           <Typography
@@ -79,8 +80,9 @@ export default function BlogCard(props) {
                 justifyContent: "space-around",
                 borderRadius: "15px",
                 backgroundColor: "#ebebeb",
+                transition: "all 0.5s",
                 "&:hover": {
-                  backgroundColor: "#cbe8f5",
+                  backgroundColor: "#d4d6d5",
                 },
               },
             ]}

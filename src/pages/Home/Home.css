@@ -1,12 +1,13 @@
 .Home {
     display: flex;
     justify-content: space-between;
-    width: 90%;
-    padding: 0 5%;
+    width: 96%;
+    padding: 0 2%;
 }
 .blogs {
-    width: 60%;
+    width: 62%;
 }
 .latestBlogs {
-    width: 35%;
+    width: 32%;
+    margin: 5% 0;
 }
