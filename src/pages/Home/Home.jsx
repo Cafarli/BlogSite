@@ -5,6 +5,7 @@ import { Typography } from "@mui/material";
 import LittleBlogCard from "../LittleBlogCard/LittleBlogCard";
 // icons
 import { TbPointFilled } from "react-icons/tb";
+import Tags from "../../components/Tags/Tags";
 
 
 // category styles
@@ -35,15 +36,7 @@ const categoryStyles = {
 
 export default function Home() {
   const [blogs, setBlogs] = useState([]);
-  const [tags, setTags] = useState([
-    "Travel",
-    "Technology",
-    "Food",
-    "Health",
-    "Nature",
-    "Lifestlye",
-    "Inspiration",
-  ]);
+
 
   useEffect(() => {
     fetch("http://localhost:4000/'blogs")
@@ -76,7 +69,8 @@ export default function Home() {
           >
             Tags
           </Typography>
-        <div className="home-tags">
+          <Tags/>
+        {/* <div className="home-tags">
           {tags.map((tag, ind) => (
             <Typography
               key={ind}
@@ -105,7 +99,7 @@ export default function Home() {
               {tag}
             </Typography>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
