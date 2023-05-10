@@ -43,13 +43,13 @@ export default function BlogCard(props) {
   return (
     <Card
       variant="outlined"
-      sx={{ p: 2,mt:2 , mb:4 , display: "flex",alignItems: "center", width: "100%", borderRadius: "20px" }}
+      sx={{ pr: 3,pl:3, mt:2 , mb:4 , display: "flex",alignItems: "center", width: "95%", borderRadius: "20px" }}
     >
       {/* Blog image */}
       <CardMedia
         sx={{
-          width: "37%",
-          height: "300px",
+          width: "35%",
+          height: "200px",
           borderRadius: "20px",
           "&:hover": {
             transform: "scale(1.01)",
@@ -98,13 +98,14 @@ export default function BlogCard(props) {
               textDecorationColor: "transparent",
               textDecorationThickness: 1,
               textUnderlineOffset: "3px",
+              transition: "all 0.5s",
               "&:hover": {
                 textDecoration: "underline",
                 textDecorationThickness: 2,
                 textDecorationColor: "blue",
               },
             }}
-            variant="h4"
+            variant="h5"
           >
             {props.data.blogName}
           </Typography>
@@ -115,6 +116,9 @@ export default function BlogCard(props) {
               mb: 2,
               mt: 2,
               overflow: "hidden",
+              whiteSpace: "nowrap",
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: 'vertical',
               textOverflow: "ellipsis",
             }}
           >
