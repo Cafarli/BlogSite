@@ -7,11 +7,13 @@ import {
   Outlet,
 } from "react-router-dom";
 import Blogs from "./pages/Home/Home";
+import Footer from "./pages/Footer/Footer";
 
 function Layout() {
   return (
     <>
       <Outlet />
+      <Footer />
     </>
   );
 }

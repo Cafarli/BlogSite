@@ -1,0 +1,31 @@
+.Footer {
+    width: 100%;
+}
+.newsletter {
+    width: 96%;
+    padding: 5% 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fbf4ea;
+    color: #de3006;
+}
+
+.MuiTextField-root{
+    width: 70%;
+}
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #fb2576 !important;
+}
+.MuiFormLabel-root.Mui-focused {
+    color: #fb2576 !important;
+
+}
+.copyrightBox {
+    width: 90%;
+    display: flex ; 
+   justify-content:space-between; 
+    margin: 0% auto;
+    padding: 2% 5%;
+    background-color: #fbf4ea;
+}

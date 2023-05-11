@@ -3,7 +3,6 @@ import { useTheme } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
-import photo from "../../images/blogImg.jpg";
 import { Typography, createTheme } from "@mui/material";
 // icons
 import WatchLaterOutlinedIcon from "@mui/icons-material/WatchLaterOutlined";
