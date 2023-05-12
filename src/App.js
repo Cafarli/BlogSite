@@ -1,13 +1,12 @@
 import "./App.css";
 import {
-  Route,
   RouterProvider,
   createBrowserRouter,
-  createRoutesFromElements,
   Outlet,
 } from "react-router-dom";
 import Blogs from "./pages/Home/Home";
 import Footer from "./pages/Footer/Footer";
+import SingleBlog from "./pages/SingleBlog/SingleBlog";
 
 function Layout() {
   return (
@@ -27,6 +26,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Blogs />,
       },
+      {
+        path: ":id",
+        element: <SingleBlog />
+      }
     ],
   },
 ]);

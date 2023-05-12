@@ -52,9 +52,7 @@ export default function Sidebar() {
         </Typography>
         {blogs.slice(5,7).map((blog, id) => (
           <LittleBlogCard key={id} data={blog} />
-        ))}
-        
-         
+        ))}         
           <Typography component="p" variant="p" sx={titleStyles}>
             Tags
           </Typography>
