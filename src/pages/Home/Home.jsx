@@ -12,7 +12,6 @@ export default function Home() {
   useEffect(() => {
     setBlogs(data["'blogs"])
   }, []);
-  console.log(blogs);
   return (
     <div className="Home">
       <div className="blogs">

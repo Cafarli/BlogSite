@@ -31,13 +31,13 @@ const privacyStyles = {
   textDecorationColor: "transparent",
   cursor: "pointer",
   "&:hover": {
-    textDecorationColor: "#fb2576",
+    textDecorationColor: "black",
     textDecorationThickness: 2,
   },
 };
 const copyrightStyles ={
   fontSize: '14px',
-  color: "#1a1a1a"
+  color: "white"
 }
 
 export default function Footer() {
@@ -69,7 +69,7 @@ export default function Footer() {
                 borderBottomRightRadius: "0px",
                 borderTopLeftRadius: "50px",
                 borderBottomLeftRadius: "50px",
-                color: "black",
+                color: "white",
               },
             }}
           />
@@ -77,7 +77,7 @@ export default function Footer() {
             variant="text"
             sx={{
               width: "30%",
-              backgroundColor: "#fb2576",
+              backgroundColor: "black",
               color: "white",
               height: "56px",
               borderTopRightRadius: "50px",
@@ -85,7 +85,8 @@ export default function Footer() {
               borderTopLeftRadius: "0px",
               borderBottomLeftRadius: "0px",
               "&:hover": {
-                backgroundColor: "#f76ea2",
+                backgroundColor: "#E0EDF5",
+                color: "black"
               },
             }}
           >

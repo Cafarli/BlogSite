@@ -8,6 +8,7 @@ import { Typography, createTheme } from "@mui/material";
 import WatchLaterOutlinedIcon from "@mui/icons-material/WatchLaterOutlined";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { TbPointFilled } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 // category styles
 const categoryStyles = {
@@ -32,17 +33,39 @@ const categoryStyles = {
   "& > .Travel": {
     color: "#E10689",
   },
+  padding: "1.5% 3%",
+  cursor: "pointer",
+  mb: 2,
+  width: "max-content",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-around",
+  borderRadius: "15px",
+  backgroundColor: "#ebebeb",
+  transition: "all 0.5s",
+  "&:hover": {
+    backgroundColor: "#d4d6d5",
+  },
 };
 
 export default function BlogCard(props) {
-  const theme = createTheme({
-    spacing: 10,
-  });
+  // const theme = createTheme({
+  //   spacing: 10,
+  // });
 
   return (
     <Card
       variant="outlined"
-      sx={{ pr: 3,pl:3, mt:2 , mb:4 , display: "flex",alignItems: "center", width: "95%", borderRadius: "20px" }}
+      sx={{
+        pr: 3,
+        pl: 3,
+        mt: 2,
+        mb: 4,
+        display: "flex",
+        alignItems: "center",
+        width: "95%",
+        borderRadius: "20px",
+      }}
     >
       {/* Blog image */}
       <CardMedia
@@ -58,56 +81,48 @@ export default function BlogCard(props) {
         image={props.data.imageUrl}
         alt="Space"
       />
-      <Box sx={{ display: "flex", width: "60%", p: 2}}>
+      <Box sx={{ display: "flex", width: "60%", p: 2 }}>
         <CardContent sx={{ flex: "1 0 auto", width: "100%" }}>
           {/* category */}
           <Typography
             variant="p"
             component="p"
             className="blogCategory"
-            sx={[
-              categoryStyles,
-              {
-                pb: 1,
-                pr: 2,
-                pt: 0.5,
-                pl: 1,
-                mb: 2,
-                width: "max-content",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-around",
-                borderRadius: "15px",
-                backgroundColor: "#ebebeb",
-                transition: "all 0.5s",
-                "&:hover": {
-                  backgroundColor: "#d4d6d5",
-                },
-              },
-            ]}
+            sx={[categoryStyles]}
           >
             <TbPointFilled className={props.data.category} />{" "}
             {props.data.category}
           </Typography>
           {/* Blog Title */}
-          <Typography
-            sx={{
+          <Link
+            to={props.data.blogID}
+            className="blogTitle"
+            style={{
+              color: "black",
+              // sx={{
               font: "bold",
               cursor: "pointer",
-              textDecorationColor: "transparent",
-              textDecorationThickness: 1,
-              textUnderlineOffset: "3px",
-              transition: "all 0.5s",
-              "&:hover": {
-                textDecoration: "underline",
-                textDecorationThickness: 2,
-                textDecorationColor: "blue",
-              },
+              textDecoration: "none",
             }}
-            variant="h5"
           >
-            {props.data.blogName}
-          </Typography>
+            <Typography
+              sx={{
+                textDecorationColor: "transparent",
+                textDecorationThickness: 1,
+                textUnderlineOffset: "3px",
+                transition: "all 1s",
+                transitionTimingFunction: "ease-in-out",
+                "&:hover": {
+                  textDecoration: "underline",
+                  textDecorationThickness: 2,
+                  textDecorationColor: "#0181B0",
+                },
+              }}
+              variant="h5"
+            >
+              {props.data.blogName}
+            </Typography>
+          </Link>
           <Typography
             variant="p"
             component="p"
@@ -117,7 +132,7 @@ export default function BlogCard(props) {
               overflow: "hidden",
               whiteSpace: "nowrap",
               WebkitLineClamp: 2,
-              WebkitBoxOrient: 'vertical',
+              WebkitBoxOrient: "vertical",
               textOverflow: "ellipsis",
             }}
           >

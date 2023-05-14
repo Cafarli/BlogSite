@@ -2,35 +2,15 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Avatar, Box, Typography } from "@mui/material";
 import LittleBlogCard from "../LittleBlogCard/LittleBlogCard";
-import Tags from "../../components/Tags/Tags";
+import Tags from "../../components/Tags";
 import data from '../../data/blogs.json'
-// icons
-import {
-  GrFacebookOption,
-  GrTwitter,
-  GrInstagram,
-  GrGithub,
-} from "react-icons/gr";
+
 
 const titleStyles = {
-  color: "black",
+  color: "white",
   fontWeight: "700",
   fontSize: "22px",
-  mt: 5,
-  mb: 2
-};
-const privacyStyles = {
-  fontSize: "14px",
-  color: "gray",
-  mr: 3,
-  mt: 5,
-  textDecoration: "underline",
-  textDecorationColor: "transparent",
-  cursor: "pointer",
-  "&:hover": {
-    textDecorationColor: "#fb2576",
-    textDecorationThickness: 2,
-  },
+  margin: "3% 0 4% 5%"
 };
 
 export default function Sidebar() {

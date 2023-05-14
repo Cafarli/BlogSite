@@ -13,6 +13,7 @@ export default function LittleBlogCard(props) {
         border: "none",
         boxShadow: "none",
         m: 1,
+        backgroundColor:"transparent"
       }}
     >
       <CardMedia
@@ -34,12 +35,13 @@ export default function LittleBlogCard(props) {
           variant="p"
           sx={{
             fontSize: "16px",
+            color: "white",
             textDecoration: "underline",
             textDecorationColor: "transparent",
             transition: "all 0.5s",
             cursor: "pointer",
             "&:hover": {
-              textDecorationColor: "red",
+              textDecorationColor: "white",
             },
           }}
         >
@@ -51,7 +53,7 @@ export default function LittleBlogCard(props) {
             display: "flex",
             justifyContent: "space-between",
             mt: 2,
-            color: "gray",
+            color: "#cfd0d4",
           }}
         >
           <Typography
