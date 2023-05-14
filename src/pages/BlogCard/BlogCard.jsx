@@ -9,44 +9,8 @@ import WatchLaterOutlinedIcon from "@mui/icons-material/WatchLaterOutlined";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { TbPointFilled } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import SingleTag from "../../components/SingleTag";
 
-// category styles
-const categoryStyles = {
-  "& > .Nature": {
-    color: "green",
-  },
-  "& > .Technology": {
-    color: "#f18509",
-  },
-  "& > .Inspiration": {
-    color: "#04baf6",
-  },
-  "& > .Food": {
-    color: "#B43ADF",
-  },
-  "& > .Health": {
-    color: "#1dbf2f",
-  },
-  "& > .Lifestyle": {
-    color: "#4d61ff",
-  },
-  "& > .Travel": {
-    color: "#E10689",
-  },
-  padding: "1.5% 3%",
-  cursor: "pointer",
-  mb: 2,
-  width: "max-content",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-around",
-  borderRadius: "15px",
-  backgroundColor: "#ebebeb",
-  transition: "all 0.5s",
-  "&:hover": {
-    backgroundColor: "#d4d6d5",
-  },
-};
 
 export default function BlogCard(props) {
   // const theme = createTheme({
@@ -84,15 +48,7 @@ export default function BlogCard(props) {
       <Box sx={{ display: "flex", width: "60%", p: 2 }}>
         <CardContent sx={{ flex: "1 0 auto", width: "100%" }}>
           {/* category */}
-          <Typography
-            variant="p"
-            component="p"
-            className="blogCategory"
-            sx={[categoryStyles]}
-          >
-            <TbPointFilled className={props.data.category} />{" "}
-            {props.data.category}
-          </Typography>
+          <SingleTag category={props.data.category}/>
           {/* Blog Title */}
           <Link
             to={props.data.blogID}

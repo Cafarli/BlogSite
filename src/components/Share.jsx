@@ -4,7 +4,6 @@ import {
   GrFacebookOption,
   GrTwitter,
   GrInstagram,
-  GrGithub,
 } from "react-icons/gr";
 import {RiWhatsappFill} from "react-icons/ri";
 import {MdEmail} from "react-icons/md";

@@ -8,6 +8,7 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import { TbPointFilled } from "react-icons/tb";
 import Share from "../../components/Share";
+import SingleTag from "../../components/SingleTag";
 
 export default function SingleBlog() {
   const { id } = useParams();
@@ -96,7 +97,8 @@ export default function SingleBlog() {
             </figcaption>
           </figure>
           <Box sx={{ width: "90%", margin: "auto" }}>
-            <Typography
+            <SingleTag category={blogData["category"]}/>
+            {/* <Typography
               variant="p"
               component="p"
               className="blogCategory"
@@ -104,7 +106,7 @@ export default function SingleBlog() {
             >
               <TbPointFilled className={blogData["category"]} />{" "}
               {blogData["category"]}
-            </Typography>
+            </Typography> */}
             <Typography sx={titleStyle}>{blogData["blogName"]}</Typography>
             <Box
               sx={{
