@@ -1,5 +1,7 @@
 body {
   background-color: #E0EDF5;
+  margin: 0;
+  padding: 0;
 }
 
 .MuiButton-text {

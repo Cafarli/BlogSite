@@ -1,4 +1,4 @@
-import { Typography, Box, TextField, FormControl, Button } from "@mui/material";
+import { Typography, Box, TextField, Button } from "@mui/material";
 import "./Contact.css";
 
 export default function Contact() {
@@ -34,19 +34,13 @@ export default function Contact() {
       <Box
         sx={{
           margin: "5% auto",
-          width: "60%",
+          width: "45%",
           borderRadius: "30px",
           boxShadow: "0px 1px 20px rgba(0,0,0,0.15)",
           backgroundColor: "white",
+          padding: "4% 4% 5% 4%",
         }}
       >
-        <FormControl
-          style={{
-            width: "80%",
-            m: "0 auto",
-            padding: "7% 10% 5% 10%",
-          }}
-        >
           <Box sx={{ width: "100%" }}>
             <TextField
               label="Fullname"
@@ -106,7 +100,6 @@ export default function Contact() {
           >
             Send
           </Button>
-        </FormControl>
       </Box>
     </div>
   );
