@@ -11,17 +11,25 @@
     background-color: #0181B0;
     color: white;
 }
+.privacy a {
+    color: black;
+    text-decoration: none;
+}
 
-.MuiTextField-root{
+.Footer .MuiTextField-root{
     width: 70%;
     color: white;
 }
-.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+.Footer .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color:  white!important;
+    color: black;
+}
+.Footer .MuiOutlinedInput-notchedOutline {
     border-color:  white!important;
 }
-.MuiFormLabel-root.Mui-focused {
-    color: white !important;
 
+#newsletterEmail {
+    border-color: white;
 }
 .copyrightBox {
     width: 90%;

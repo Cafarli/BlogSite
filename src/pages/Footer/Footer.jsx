@@ -15,12 +15,13 @@ import {
   GrInstagram,
   GrGithub,
 } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 const titleStyles = {
   color: "black",
   fontWeight: "700",
   fontSize: "23px",
-  mb:4
+  mb: 4,
 };
 const privacyStyles = {
   fontSize: "16px",
@@ -35,10 +36,10 @@ const privacyStyles = {
     textDecorationThickness: 2,
   },
 };
-const copyrightStyles ={
-  fontSize: '14px',
-  color: "white"
-}
+const copyrightStyles = {
+  fontSize: "14px",
+  color: "white",
+};
 
 export default function Footer() {
   return (
@@ -70,7 +71,19 @@ export default function Footer() {
                 borderTopLeftRadius: "50px",
                 borderBottomLeftRadius: "50px",
                 color: "white",
+                "&:focus":{
+                  color: "white",
+                }
               },
+            }}
+            InputLabelProps={{
+              style:{
+                color: "white",
+                "&:focus":{
+                  color: "white",
+                }
+
+              }
             }}
           />
           <Button
@@ -86,7 +99,7 @@ export default function Footer() {
               borderBottomLeftRadius: "0px",
               "&:hover": {
                 backgroundColor: "#E0EDF5",
-                color: "black"
+                color: "black",
               },
             }}
           >
@@ -94,43 +107,57 @@ export default function Footer() {
           </Button>
         </div>
       </div>
-      <Grid container sx={{pr:4, pl:4,mt:6,mb:6}}>
+      <Grid container sx={{ pr: 4, pl: 4, mt: 6, mb: 6 }}>
         {/* LOGO */}
         <Grid item md={4}>
-          <Box component="img" src={logo} sx={{height:"70%", width:"50%"}} />
+          <Box
+            component="img"
+            src={logo}
+            sx={{ height: "70%", width: "50%" }}
+          />
         </Grid>
         {/* LEGAL */}
-        <Grid item md={4}>
-            <Typography
-              component="p"
-              variant="p"
-              sx={[titleStyles]}
-            >
-              Legal
-            </Typography>
-          <div className="privacy" style={{ display: "flex", flexDirection: 'column' }}>
-            <Typography component="p" variant="p" sx={privacyStyles}>
-              Privacy Policy
-            </Typography>
-            <Typography component="p" variant="p" sx={privacyStyles}>
-              Terms and conditions
-            </Typography>
-            <Typography component="p" variant="p" sx={privacyStyles}>
-              Help
-            </Typography>
+        <Grid
+          item
+          md={4}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            textAlign: "center ",
+          }}
+        >
+          <Typography component="p" variant="p" sx={[titleStyles]}>
+            Legal
+          </Typography>
+          <div
+            className="privacy"
+            style={{ display: "flex", flexDirection: "column" }}
+          >
+            <Link to="/privacy-policy">
+              <Typography component="p" variant="p" sx={privacyStyles}>
+                Privacy Policy
+              </Typography>
+            </Link>
+            <Link to="/terms-and-conditions">
+              <Typography component="p" variant="p" sx={privacyStyles}>
+                Terms and conditions
+              </Typography>
+            </Link>
+            <Link to="/contact">
+              <Typography component="p" variant="p" sx={privacyStyles}>
+                Contact
+              </Typography>
+            </Link>
           </div>
         </Grid>
         {/* FOLLOW US */}
-        <Grid item md={4} sx={{ display: "flex", justifyContent:'center' }}>
+        <Grid item md={4} sx={{ display: "flex", justifyContent: "center" }}>
           <div className="follow-us">
-            <Typography
-              component="p"
-              variant="p"
-              sx={[titleStyles]}
-            >
+            <Typography component="p" variant="p" sx={[titleStyles]}>
               Follow us
             </Typography>
-            <Box sx={{ display: "flex", justifyContent:'center' }}>
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
               <Avatar sx={{ mr: 2, color: "#1877f2", bgcolor: "#eff1f4" }}>
                 <GrFacebookOption />
               </Avatar>
@@ -148,8 +175,12 @@ export default function Footer() {
         </Grid>
       </Grid>
       <div className="copyrightBox">
-        <Typography component="p" variant="p" sx={copyrightStyles}>Copyright © {new Date().getFullYear()} </Typography>
-        <Typography component="p" variant="p"sx={copyrightStyles}>Powered by T.Jafarli</Typography>
+        <Typography component="p" variant="p" sx={copyrightStyles}>
+          Copyright © {new Date().getFullYear()}{" "}
+        </Typography>
+        <Typography component="p" variant="p" sx={copyrightStyles}>
+          Powered by T.Jafarli
+        </Typography>
       </div>
     </div>
   );

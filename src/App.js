@@ -7,6 +7,7 @@ import {
 import Blogs from "./pages/Home/Home";
 import Footer from "./pages/Footer/Footer";
 import SingleBlog from "./pages/SingleBlog/SingleBlog";
+import Contact from "./pages/Contact/Contact";
 
 function Layout() {
   return (
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: ":id",
         element: <SingleBlog />
+      },
+      {
+        path: "contact",
+        element: <Contact />
       }
     ],
   },

@@ -98,15 +98,6 @@ export default function SingleBlog() {
           </figure>
           <Box sx={{ width: "90%", margin: "auto" }}>
             <SingleTag category={blogData["category"]}/>
-            {/* <Typography
-              variant="p"
-              component="p"
-              className="blogCategory"
-              sx={[categoryStyles]}
-            >
-              <TbPointFilled className={blogData["category"]} />{" "}
-              {blogData["category"]}
-            </Typography> */}
             <Typography sx={titleStyle}>{blogData["blogName"]}</Typography>
             <Box
               sx={{
