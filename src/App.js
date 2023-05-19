@@ -10,10 +10,12 @@ import SingleBlog from "./pages/SingleBlog/SingleBlog";
 import Contact from "./pages/Contact/Contact";
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
+import Header from "./pages/Header/Header";
 
 function Layout() {
   return (
     <>
+      <Header />
       <Outlet />
       <Footer />
     </>
