@@ -9,6 +9,7 @@ import Footer from "./pages/Footer/Footer";
 import SingleBlog from "./pages/SingleBlog/SingleBlog";
 import Contact from "./pages/Contact/Contact";
 import Login from "./pages/Login/Login";
+import SignUp from "./pages/SignUp/SignUp";
 
 function Layout() {
   return (
@@ -39,6 +40,9 @@ const router = createBrowserRouter([
     ],
   },{
     element: <Login />,
+    path: "login"
+  },{
+    element: <SignUp />,
     path: "sign-up"
   }
 ]);
