@@ -11,6 +11,8 @@ import Contact from "./pages/Contact/Contact";
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import Header from "./pages/Header/Header";
+import PrivacyPolicy from "./pages/Legal/PrivacyPolicy";
+import Terms from "./pages/Legal/Terms";
 
 function Layout() {
   return (
@@ -38,7 +40,15 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />
-      }
+      },
+      {
+        path: "privacy",
+        element: <PrivacyPolicy />
+      },
+      {
+        path: "terms",
+        element: <Terms />
+      },
     ],
   },{
     element: <Login />,

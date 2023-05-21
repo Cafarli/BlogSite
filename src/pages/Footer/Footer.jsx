@@ -134,12 +134,12 @@ export default function Footer() {
             className="privacy"
             style={{ display: "flex", flexDirection: "column" }}
           >
-            <Link to="/privacy-policy">
+            <Link to="/privacy">
               <Typography component="p" variant="p" sx={privacyStyles}>
                 Privacy Policy
               </Typography>
             </Link>
-            <Link to="/terms-and-conditions">
+            <Link to="/terms">
               <Typography component="p" variant="p" sx={privacyStyles}>
                 Terms and conditions
               </Typography>
