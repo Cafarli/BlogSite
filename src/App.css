@@ -4,8 +4,45 @@ body {
   padding: 0;
 }
 
+/* dark mode */
+body.dark {
+  background-color: #262a2e;
+}
+body.dark .Header {
+  background-color: #161819;
+}
+body.dark .blogCard {
+  background-color: #161819;
+  color: white;
+}
+body.dark .blogTitle {
+  color: white;
+}
+body.dark .blogCategory {
+  color: #d4d4d4;
+  background-color: #313438;
+}
+body.dark .legalBox, 
+body.dark .legalBox {
+  background-color: #161819;
+  color: #d4d4d4;
+}
+body.dark .Terms, 
+body.dark .PrivacyPolicy {
+  color: white;
+}
+
+
+/* NORMAL MODE */
 .MuiButton-text {
   text-transform:capitalize !important;
+}
+.Header {
+  background-color: #262626;
+}
+/* BLOG CARD */
+.blogTitle {
+  color: black;
 }
 .SingleBlog {
   width: 96%;
@@ -30,3 +67,8 @@ body {
   width: 100%;
   margin: 5% auto;
 }
+/* TAGS*/
+.blogCategory {
+  background-color: #ebebeb;
+}
+

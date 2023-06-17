@@ -1,0 +1,13 @@
+.singleBlog-content {
+    background-color: white;
+}
+
+body.dark .singleBlog-content {
+    background-color: #161819;
+    color: #d4d4d4;
+}
+
+body.dark .Share {
+    background-color: #161819;
+    color: #d4d4d4;
+}

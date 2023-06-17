@@ -1,43 +1,85 @@
 .Footer {
-    width: 100%;
-    margin-top: 5%;
+  width: 100%;
+  margin-top: 5%;
 }
 .newsletter {
-    width: 94%;
-    padding: 5% 3%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0181B0;
-    color: white;
+  width: 94%;
+  padding: 5% 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0181b0;
+  color: white;
 }
 .privacy a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
-.Footer .MuiTextField-root{
-    width: 70%;
-    color: white;
+.Footer .MuiTextField-root {
+  width: 70%;
+  color: white;
 }
 .Footer .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-    border-color:  white!important;
-    color: black;
+  border-color: white !important;
+  color: black;
 }
 .Footer .MuiOutlinedInput-notchedOutline {
-    border-color:  white!important;
+  border-color: white !important;
 }
 
 #newsletterEmail {
-    border-color: white;
+  border-color: white;
 }
 .copyrightBox {
-    width: 90%;
-    display: flex ; 
-    justify-content:space-between; 
-    margin: 0% auto;
-    padding: 2% 5%;
-    background-color: #0181B0;
-    background-color: #262626;
-    color: white;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0% auto;
+  padding: 2% 5%;
+  background-color: #0181b0;
+  background-color: #262626;
+  color: white;
+}
+.footer-second p {
+  color: black;
+}
+.footer-avatar {
+  background-color: #eeeeee !important;
+  box-shadow: 0 0px 5px;
+}
+.footer-avatar.facebook:hover {
+  background-color: #1877f2 !important;
+  color: white;
+}
+.footer-avatar.github:hover {
+  background-color: black !important;
+  color: white;
+}
+.footer-avatar.twitter:hover {
+  background-color: #1da1f2 !important;
+  color: white;
+}
+.footer-avatar.insta:hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  color: white;
+}
+
+/* DARK MODE */
+body.dark .footer-second p {
+  color: white;
+}
+body.dark .copyrightBox {
+  background-color: #161819;
+}
+body.dark .footer-avatar {
+  background-color: #d4d4d4 !important;
+  box-shadow: 0 0px 7px;
 }

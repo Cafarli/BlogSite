@@ -44,10 +44,18 @@ export default function Header() {
   function handleClose() {
     setAnchorEl(null);
   }
-  const [day, setDay]= useState("sun");
+
+  // light/dark mode
+  const [day, setDay] = useState("sun");
   function handleDay() {
-    day==="sun"? setDay("moon"):setDay("sun");
-  } 
+    if (day === "sun") {
+      setDay("moon");
+      document.body.classList.add("dark");
+    } else {
+      setDay("sun");
+      document.body.classList.remove("dark");
+    }
+  }
 
   return (
     <div
@@ -55,9 +63,12 @@ export default function Header() {
         width: "90%",
         display: "flex",
         alignItems: "center",
-        backgroundColor: "#262626",
+        boxShadow: "0 5px 10px",
         padding: "2% 5%",
         margin: "0 0 4% 0",
+        position: "sticky",
+        top: "0px",
+        zIndex: "1000",
       }}
       className="Header"
     >
@@ -69,7 +80,7 @@ export default function Header() {
           alignItems: "center",
         }}
       >
-        <Link style={linkStyles}>
+        <Link style={linkStyles} to="/">
           <Typography sx={textStyles}>Home</Typography>
         </Link>
 
@@ -122,16 +133,14 @@ export default function Header() {
             </MenuItem>
           </Link>
         </Menu>
-        <Link style={linkStyles}>
-          <Typography sx={textStyles}>Contact</Typography>
-        </Link>
       </Box>
       <Box sx={{ width: "20%", display: "flex", alignItems: "center" }}>
+        <Link to="sign-up" style={{width: "40%", margin: "0 auto"}}>
         <img
           alt="logo"
           src={logo}
-          style={{ objectFit: "cover", width: "50%", margin: "0 auto" }}
-        />
+          style={{ objectFit: "cover", width: "100%" }}
+        /></Link>
       </Box>
       <Box
         sx={{
@@ -141,16 +150,16 @@ export default function Header() {
           alignItems: "center",
         }}
       >
-        <Link style={linkStyles}>
+        <Link style={linkStyles} to="sign-up">
           <Typography sx={textStyles}>Sign Up</Typography>
         </Link>
         <Link style={linkStyles}>
           <Typography>
-            { day==="sun" ?
+            {day === "sun" ? (
               <BiSun onClick={handleDay} style={{ fontSize: "20px" }} />
-              :
+            ) : (
               <BiMoon onClick={handleDay} style={{ fontSize: "20px" }} />
-            }
+            )}
           </Typography>
         </Link>
         <Paper>

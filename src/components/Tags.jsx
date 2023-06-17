@@ -34,7 +34,6 @@ const categoryStyles = {
   alignItems: "center",
   justifyContent: "space-around",
   borderRadius: "15px",
-  backgroundColor: "#ebebeb",
   transition: "all 0.5s",
   "&:hover": {
     backgroundColor: "#d4d6d5",

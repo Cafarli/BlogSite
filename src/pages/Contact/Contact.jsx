@@ -21,7 +21,7 @@ export default function Contact() {
   };
   return (
     <div className="Contact">
-      <Box sx={{ width: "70%", m: "0 auto", textAlign: "center" }}>
+      <Box className="contact-title" sx={{ width: "70%", m: "0 auto", textAlign: "center" }}>
         <Typography sx={{ fontSize: "37px", fontWeight: "bold" }}>
           Contact
         </Typography>
@@ -32,6 +32,7 @@ export default function Contact() {
         </Typography>
       </Box>
       <Box
+      className="contact-form"
         sx={{
           margin: "5% auto",
           width: "45%",

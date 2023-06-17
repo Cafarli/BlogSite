@@ -5,7 +5,7 @@ export default function Terms() {
   return (
     <div className="Terms">
       <Typography sx={{fontSize:"22px", fontWeight:"bold",textAlign:"center"}} >Terms   & Conditions</Typography>
-      <Box sx={{backgroundColor:"white", width:"50%", margin:"2% auto",p:"4% 7%", borderRadius:"30px"}} >
+      <Box className="legalBox" sx={{backgroundColor:"white", width:"50%", margin:"2% auto",p:"4% 7%", borderRadius:"30px"}} >
         This is an example page for privacy policy. Also this page is an example
         of static page. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Aenean vitae bibendum purus. Fusce commodo blandit justo ut placerat.

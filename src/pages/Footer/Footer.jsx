@@ -18,7 +18,6 @@ import {
 import { Link } from "react-router-dom";
 
 const titleStyles = {
-  color: "black",
   fontWeight: "700",
   fontSize: "23px",
   mb: 4,
@@ -71,19 +70,18 @@ export default function Footer() {
                 borderTopLeftRadius: "50px",
                 borderBottomLeftRadius: "50px",
                 color: "white",
-                "&:focus":{
+                "&:focus": {
                   color: "white",
-                }
+                },
               },
             }}
             InputLabelProps={{
-              style:{
+              style: {
                 color: "white",
-                "&:focus":{
+                "&:focus": {
                   color: "white",
-                }
-
-              }
+                },
+              },
             }}
           />
           <Button
@@ -107,7 +105,11 @@ export default function Footer() {
           </Button>
         </div>
       </div>
-      <Grid container sx={{ pr: 4, pl: 4, mt: 6, mb: 6 }}>
+      <Grid
+        className="footer-second"
+        container
+        sx={{ pr: 4, pl: 4, mt: 6, mb: 6 }}
+      >
         {/* LOGO */}
         <Grid item md={4}>
           <Box
@@ -158,16 +160,25 @@ export default function Footer() {
               Follow us
             </Typography>
             <Box sx={{ display: "flex", justifyContent: "center" }}>
-              <Avatar sx={{ mr: 2, color: "#1877f2", bgcolor: "#eff1f4" }}>
+              <Avatar
+                className="footer-avatar facebook"
+                sx={{ mr: 2, color: "#1877f2" }}
+              >
                 <GrFacebookOption />
               </Avatar>
-              <Avatar sx={{ mr: 2, color: "black", bgcolor: "#eff1f4" }}>
+              <Avatar className="footer-avatar github" sx={{ mr: 2, color: "black" }}>
                 <GrGithub />
               </Avatar>
-              <Avatar sx={{ mr: 2, color: "#1da1f2", bgcolor: "#eff1f4" }}>
+              <Avatar
+                className="footer-avatar twitter"
+                sx={{ mr: 2, color: "#1da1f2" }}
+              >
                 <GrTwitter />
               </Avatar>
-              <Avatar sx={{ mr: 2, color: "#c13584", bgcolor: "#eff1f4" }}>
+              <Avatar
+                className="footer-avatar insta"
+                sx={{ mr: 2, color: "#c13584" }}
+              >
                 <GrInstagram />
               </Avatar>
             </Box>

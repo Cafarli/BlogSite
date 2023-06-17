@@ -2,3 +2,19 @@
     border-color:  black!important;
     color: black;
 }
+.contact-title {
+    color: black;
+}
+
+body.dark .contact-title {
+    color: white;
+}
+
+body.dark .contact-form {
+    background-color: #161819;
+}
+
+body.dark .Contact .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color:  white!important;
+    color: white;
+}

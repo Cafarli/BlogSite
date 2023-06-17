@@ -1,3 +1,4 @@
+import "./SingleBlog.css";
 import { Box, Typography } from "@mui/material";
 import data from "../../data/blogs.json";
 import { useParams } from "react-router-dom";
@@ -6,7 +7,6 @@ import Sidebar from "../Sidebar/Sidebar";
 import WatchLaterOutlinedIcon from "@mui/icons-material/WatchLaterOutlined";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-import { TbPointFilled } from "react-icons/tb";
 import Share from "../../components/Share";
 import SingleTag from "../../components/SingleTag";
 
@@ -68,10 +68,10 @@ export default function SingleBlog() {
     // SingleBlog css in App.css
     <div className="SingleBlog">
       <Box sx={{display:"flex", justifyContent:"space-between"}}>
-        <Box
+        <Box 
+          className= "singleBlog-content"
           sx={{
             width: "59%",
-            backgroundColor: "white",
             p: "2% 1%",
             borderRadius: "30px",
           }}

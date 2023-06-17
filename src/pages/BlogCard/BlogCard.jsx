@@ -1,24 +1,22 @@
 import Box from "@mui/material/Box";
-import { useTheme } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
-import { Typography, createTheme } from "@mui/material";
+import { Typography } from "@mui/material";
 // icons
 import WatchLaterOutlinedIcon from "@mui/icons-material/WatchLaterOutlined";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import { TbPointFilled } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import SingleTag from "../../components/SingleTag";
 
 
+
 export default function BlogCard(props) {
-  // const theme = createTheme({
-  //   spacing: 10,
-  // });
+
 
   return (
     <Card
+      className="blogCard"
       variant="outlined"
       sx={{
         pr: 3,
@@ -54,8 +52,6 @@ export default function BlogCard(props) {
             to={props.data.blogID}
             className="blogTitle"
             style={{
-              color: "black",
-              // sx={{
               font: "bold",
               cursor: "pointer",
               textDecoration: "none",
