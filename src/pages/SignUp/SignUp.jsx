@@ -49,11 +49,12 @@ export default function SignUp() {
       }}
     >
       <Box sx={boxStyle}>
+        <Link style={{width:"100%"}} to="/">
         <img
           alt="logo"
           src={logo}
-          style={{ width: "12%", margin: "3% auto" }}
-        />
+          style={{ width: "15%", margin: "3% auto" }}
+        /></Link>
         <Typography
           sx={{
             fontSize: "35px",

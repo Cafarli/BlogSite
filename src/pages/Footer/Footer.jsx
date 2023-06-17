@@ -29,10 +29,13 @@ const privacyStyles = {
   color: "black",
   textDecoration: "underline",
   textDecorationColor: "transparent",
+  left: "50%",
+  transition: "all 0.5s ease",
   cursor: "pointer",
   "&:hover": {
     textDecorationColor: "black",
     textDecorationThickness: 2,
+    left: "0%",
   },
 };
 const copyrightStyles = {

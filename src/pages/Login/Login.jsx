@@ -49,11 +49,12 @@ export default function Login() {
       }}
     >
       <Box sx={boxStyle}>
+      <Link style={{width:"100%"}} to="/">
         <img
           alt="logo"
           src={logo}
-          style={{ width: "12%", margin: "3% auto" }}
-        />
+          style={{ width: "15%", margin: "3% auto" }}
+        /></Link>
         <Typography
           sx={{
             fontSize: "35px",
@@ -110,7 +111,7 @@ export default function Login() {
           </Button>
         </form>
         <Typography sx={{ fontSize: "14px", m: "7% auto 0 auto", color:"gray", }}>
-          Don't you have an account? <Link to="/sign-in" style={{ color:"#191970", textDecoration:"none", }}>Sign In</Link>
+          Don't you have an account? <Link to="/sign-up" style={{ color:"#191970", textDecoration:"none", }}>Sign Up</Link>
         </Typography>
       </Box>
     </div>
