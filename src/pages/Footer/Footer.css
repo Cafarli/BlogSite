@@ -47,6 +47,7 @@
 .footer-avatar {
   background-color: #eeeeee !important;
   box-shadow: 0 0px 5px;
+  cursor: pointer;
 }
 .footer-avatar.facebook:hover {
   background-color: #1877f2 !important;
