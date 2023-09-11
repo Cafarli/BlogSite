@@ -27,43 +27,7 @@ export default function SingleBlog() {
     margin: "6% 0",
   };
 
-  // category styles
-  const categoryStyles = {
-    "& > .Nature": {
-      color: "green",
-    },
-    "& > .Technology": {
-      color: "#f18509",
-    },
-    "& > .Inspiration": {
-      color: "#04baf6",
-    },
-    "& > .Food": {
-      color: "#B43ADF",
-    },
-    "& > .Health": {
-      color: "#1dbf2f",
-    },
-    "& > .Lifestyle": {
-      color: "#4d61ff",
-    },
-    "& > .Travel": {
-      color: "#E10689",
-    },
-    padding: "1% 2%",
-    cursor: "pointer",
-    margin: "6% 0 0% 0",
-    width: "max-content",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-around",
-    borderRadius: "15px",
-    backgroundColor: "#ebebeb",
-    transition: "all 0.5s",
-    "&:hover": {
-      backgroundColor: "#d4d6d5",
-    },
-  };
+  
   return (
     // SingleBlog css in App.css
     <div className="SingleBlog">
@@ -100,6 +64,7 @@ export default function SingleBlog() {
             <SingleTag category={blogData["category"]}/>
             <Typography sx={titleStyle}>{blogData["blogName"]}</Typography>
             <Box
+            className="sb-detail"
               sx={{
                 width: "60%",
                 display: "flex",

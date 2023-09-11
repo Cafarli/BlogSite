@@ -91,6 +91,7 @@ export default function BlogCard(props) {
             {props.data.content}
           </Typography>
           <Box
+            className="blogCard-Detail"
             sx={{
               width: "60%",
               display: "flex",

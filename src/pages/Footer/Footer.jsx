@@ -193,7 +193,7 @@ export default function Footer() {
           Copyright © {new Date().getFullYear()}{" "}
         </Typography>
         <Typography component="p" variant="p" sx={copyrightStyles}>
-          Powered by T.Jafarli
+          Powered by Jafarli
         </Typography>
       </div>
     </div>

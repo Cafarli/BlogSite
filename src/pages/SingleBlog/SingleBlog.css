@@ -11,3 +11,9 @@ body.dark .Share {
     background-color: #161819;
     color: #d4d4d4;
 }
+body.dark .SingleBlog figcaption {
+    color: #c0c0c0 !important;
+}
+body.dark .SingleBlog .sb-detail p {
+    color: #b5b3b3 ;
+}

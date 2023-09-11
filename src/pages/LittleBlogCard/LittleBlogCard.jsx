@@ -2,10 +2,12 @@ import { Card, CardContent, CardMedia, Box } from "@mui/material";
 import { Typography } from "@mui/material";
 // icons
 import WatchLaterOutlinedIcon from "@mui/icons-material/WatchLaterOutlined";
+import { Link } from "react-router-dom";
 
 export default function LittleBlogCard(props) {
   return (
     <Card
+    className="LittleBlogCard"
       sx={{
         width: "100%",
         display: "flex",
@@ -13,23 +15,26 @@ export default function LittleBlogCard(props) {
         border: "none",
         boxShadow: "none",
         m: 1,
-        backgroundColor:"transparent"
+        backgroundColor: "transparent",
       }}
     >
-      <CardMedia
-        sx={{
-          width: "25%",
-          height: "90px",
-          borderRadius: "20px",
-          "&:hover": {
-            transform: "scale(1.01)",
-          },
-        }}
-        component="img"
-        image={props.data.imageUrl}
-        alt="add to json file"
-      />
-      <CardContent sx={{width:"70%"}}>
+      <Link to={props.data.blogID} style={{ width: "25%", height: "90px" }}>
+        <CardMedia
+          sx={{
+            width: "100%",
+            height: "100%",
+            borderRadius: "20px",
+            "&:hover": {
+              transform: "scale(1.01)",
+            },
+          }}
+          component="img"
+          image={props.data.imageUrl}
+          alt="add to json file"
+        />
+      </Link>
+      <CardContent sx={{ width: "70%" }}>
+        <Link to={props.data.blogID} style={{textDecoration: "none"}}>
         <Typography
           component="p"
           variant="p"
@@ -46,8 +51,9 @@ export default function LittleBlogCard(props) {
           }}
         >
           {props.data.blogName}
-        </Typography>
+        </Typography></Link>
         <Box
+          className="lbc-detail"
           sx={{
             width: "100%",
             display: "flex",

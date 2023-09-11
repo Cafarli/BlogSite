@@ -15,6 +15,9 @@ body.dark .blogCard {
   background-color: #161819;
   color: white;
 }
+body.dark .blogCard-Detail p{
+  color: #b5b3b3;
+}
 body.dark .blogTitle {
   color: white;
 }
@@ -30,6 +33,14 @@ body.dark .legalBox {
 body.dark .Terms, 
 body.dark .PrivacyPolicy {
   color: white;
+}
+body.dark .LittleBlogCard .lbc-detail p{
+  color: #d4d4d4;
+}
+
+body.dark .blogCategory {
+  background-color: #CFCFCF;
+  color: black;
 }
 
 
@@ -47,7 +58,7 @@ body.dark .PrivacyPolicy {
 .SingleBlog {
   width: 96%;
   margin: 0 auto;
-  padding: 5% 0;
+  padding: 0 0 5% 0;
 }
 .Sidebar {
   width: 90%;

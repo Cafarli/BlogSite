@@ -19,22 +19,22 @@ export default function Share() {
     <div className="Share">
       <Typography sx={titleStyle} >Share this article</Typography>
       <Box className="share-box" sx={{ display: "flex", justifyContent: "center" }}>
-        <Avatar sx={{ mr: 3, color: "#1877f2", bgcolor: "#eff1f4", boxShadow:"0 0 5px", "&:hover": {color: "white", bgcolor: "#1877f2"} }}>
+        <Avatar sx={{ mr: 3, color: "#1877f2", bgcolor: "#eff1f4", boxShadow:"0 0 5px", "&:hover": {color: "white", bgcolor: "#1877f2", cursor:"pointer"} }}>
           <GrFacebookOption />
         </Avatar>
-        <Avatar sx={{ mr: 3, color: "#1da1f2", bgcolor: "#eff1f4", boxShadow:"0 0 5px", "&:hover": {color: "white", bgcolor: "#1da1f2"} }}>
+        <Avatar sx={{ mr: 3, color: "#1da1f2", bgcolor: "#eff1f4", boxShadow:"0 0 5px", "&:hover": {color: "white", bgcolor: "#1da1f2", cursor:"pointer"} }}>
           <GrTwitter />
         </Avatar>
-        <Avatar sx={{ mr: 3, color: "#c13584", bgcolor: "#eff1f4", boxShadow:"0 0 5px", "&:hover": {color: "white", bgcolor: "#c13584"} }}>
+        <Avatar sx={{ mr: 3, color: "#c13584", bgcolor: "#eff1f4", boxShadow:"0 0 5px", "&:hover": {color: "white", bgcolor: "#c13584", cursor:"pointer"} }}>
           <GrInstagram />
         </Avatar>
-        <Avatar sx={{ mr: 3, color: "#25d366", bgcolor: "#eff1f4", boxShadow:"0 0 5px", "&:hover": {color: "white", bgcolor: "#25d366"} }}>
+        <Avatar sx={{ mr: 3, color: "#25d366", bgcolor: "#eff1f4", boxShadow:"0 0 5px", "&:hover": {color: "white", bgcolor: "#25d366", cursor:"pointer"} }}>
           <RiWhatsappFill />
         </Avatar>
-        <Avatar sx={{ mr: 3, color: "#4285F4", bgcolor: "#eff1f4", boxShadow:"0 0 5px", "&:hover": {color: "white", bgcolor: "#4285F4"} }}>
+        <Avatar sx={{ mr: 3, color: "#4285F4", bgcolor: "#eff1f4", boxShadow:"0 0 5px", "&:hover": {color: "white", bgcolor: "#4285F4", cursor:"pointer"} }}>
           <MdEmail />
         </Avatar>
-        <Avatar sx={{ mr: 3, color: "#fb2576", bgcolor: "#eff1f4", boxShadow:"0 0 5px", "&:hover": {color: "white", bgcolor: "#fb2576"} }}>
+        <Avatar sx={{ mr: 3, color: "#fb2576", bgcolor: "#eff1f4", boxShadow:"0 0 5px", "&:hover": {color: "white", bgcolor: "#fb2576", cursor:"pointer"} }}>
           <AiOutlineLink />
         </Avatar>
       </Box>

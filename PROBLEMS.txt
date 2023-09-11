@@ -1,3 +1,4 @@
 contact - form +
 contact - dark mode
 dark moda kecende esas ekrana atir avtomatik
+home - side bar- ardicil iki posta klikledikde error verir, cunki her ikisinin id-sini goturur
