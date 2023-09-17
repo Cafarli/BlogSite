@@ -49,7 +49,7 @@ export default function BlogCard(props) {
           <SingleTag category={props.data.category}/>
           {/* Blog Title */}
           <Link
-            to={props.data.blogID}
+            to={`/blogs/${props.data.blogID}`}
             className="blogTitle"
             style={{
               font: "bold",

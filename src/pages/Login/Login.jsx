@@ -39,6 +39,7 @@ export default function Login() {
       className="Login"
       style={{
         width: "100%",
+        minHeight: "100%",
         position: "relative",
         display: "flex",
         justifyContent: "center",

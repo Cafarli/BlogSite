@@ -34,28 +34,28 @@ const router = createBrowserRouter([
         element: <Blogs />,
       },
       {
-        path: "/:id",
+        path: "blogs/:id",
         element: <SingleBlog />
       },
       {
-        path: "contact",
+        path: "/contact",
         element: <Contact />
       },
       {
-        path: "privacy",
+        path: "/privacy",
         element: <PrivacyPolicy />
       },
       {
-        path: "terms",
+        path: "/terms",
         element: <Terms />
       },
     ],
   },{
     element: <Login />,
-    path: "login"
+    path: "/login"
   },{
     element: <SignUp />,
-    path: "sign-up"
+    path: "/sign-up"
   }
 ]);
 

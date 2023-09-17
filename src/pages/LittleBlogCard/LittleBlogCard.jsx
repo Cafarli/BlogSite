@@ -18,7 +18,7 @@ export default function LittleBlogCard(props) {
         backgroundColor: "transparent",
       }}
     >
-      <Link to={props.data.blogID} style={{ width: "25%", height: "90px" }}>
+      <Link to={`/blogs/${props.data.blogID}`} style={{ width: "25%", height: "90px" }}>
         <CardMedia
           sx={{
             width: "100%",
@@ -34,7 +34,7 @@ export default function LittleBlogCard(props) {
         />
       </Link>
       <CardContent sx={{ width: "70%" }}>
-        <Link to={props.data.blogID} style={{textDecoration: "none"}}>
+        <Link to={`/blogs/${props.data.blogID}`} style={{textDecoration: "none"}}>
         <Typography
           component="p"
           variant="p"

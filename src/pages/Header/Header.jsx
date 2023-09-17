@@ -153,7 +153,7 @@ export default function Header() {
         <Link style={linkStyles} to="sign-up">
           <Typography sx={textStyles}>Sign Up</Typography>
         </Link>
-        <Link style={linkStyles}>
+        {/* <Link style={linkStyles}>
           <Typography>
             {day === "sun" ? (
               <BiSun onClick={handleDay} style={{ fontSize: "20px" }} />
@@ -161,7 +161,7 @@ export default function Header() {
               <BiMoon onClick={handleDay} style={{ fontSize: "20px" }} />
             )}
           </Typography>
-        </Link>
+        </Link> */}
         <Paper>
           <InputBase
             sx={{ ml: 1 }}

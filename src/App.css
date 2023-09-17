@@ -1,11 +1,23 @@
+html{
+  height: 100%;
+}
 body {
+  height: 100% !important;
+  min-width: 100%;
   background-color: #E0EDF5;
   margin: 0;
   padding: 0;
 }
 
+#root {
+  height: 100%;
+  /* min-height: 100vh; */
+}
+/* #root > div {
+  min-height: 100%!important;
+} */
 /* dark mode */
-body.dark {
+/* body.dark {
   background-color: #262a2e;
 }
 body.dark .Header {
@@ -41,7 +53,7 @@ body.dark .LittleBlogCard .lbc-detail p{
 body.dark .blogCategory {
   background-color: #CFCFCF;
   color: black;
-}
+} */
 
 
 /* NORMAL MODE */
